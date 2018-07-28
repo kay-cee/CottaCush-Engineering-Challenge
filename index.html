@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Banana Plantation Profit Calculator</title>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -20,11 +20,9 @@
 
 <!--Start your project here-->                            
 <div class="container center-on-small-only">
-    <div class="row">
-        <!-- Material form register -->
-        <div class="card col-sm-12">
+        <div class="card col-sm-12 col-md-6">
 
-            <h5 class="card-header info-color white-text text-center py-4">
+            <h5 class="card-header mdb-color white-text text-center py-4">
                 <strong>Banana Plantation Profit Calculator</strong>
             </h5>
 
@@ -32,13 +30,13 @@
             <div class="card-body px-lg-5 pt-0">
 
                 <!-- Form -->
-                <form class="text-center" style="color: #757575;">
+                <form class="text-center" style="color: #757575; margin-top: 20px;">
 
                     <div class="form-row">
                         <div class="col">
                             <!-- First name -->
                             <div class="md-form">
-                                <input type="number" id="nob" class="form-control">
+                                <input type="number" id="nob" class="form-control" required>
                                 <label for="nob">Number of Bananas on plantation</label>
                                 <small id="nob-bananas-help" class="form-text text-muted mb-4">
                                     Enter a number greater than 3000 in multiples of 1000
@@ -48,7 +46,7 @@
                         <div class="col">
                             <!-- Last name -->
                             <div class="md-form">
-                                <input type="number" id="dtm" class="form-control">
+                                <input type="number" id="dtm" class="form-control" required>
                                 <label for="dtm">Distance to market in Kilometers</label>
                                 <small id="distance-to-market" class="form-text text-muted mb-4">
                                     Enter a number greater than 999 but less than 100,001
@@ -58,7 +56,7 @@
                         <div class="col">
                             <!-- Last name -->
                             <div class="md-form">
-                                <input type="number" id="noc" class="form-control">
+                                <input type="number" id="noc" class="form-control" required>
                                 <label for="noc">Number of Camels</label>
                                 <small id="number-of-camels" class="form-text text-muted mb-4">
                                     Enter a number from 1 to 100
@@ -68,24 +66,24 @@
                         <div class="col">
                             <!-- Last name -->
                             <div class="md-form">
-                                <input type="number" id="BperKm" class="form-control">
+                                <input type="number" id="BperKm" class="form-control" required>
                                 <label for="BperKm">Number of bananas eaten by camel per km</label>
                                 <small id="bananas-eaten" class="form-text text-muted mb-4">
                                     Enter a number from 1-10
                                 </small>
                             </div>
                         </div>
-                        <div class="col answer">
-                            <!-- Last name -->
-                            <div class="md-form">
-                                <input type="number" id="answer" class="form-control" >
-                                <label for="answer">Maximum Amount of Bananas Left</label>
-                            </div>
-                        </div>
+                        <!--<div class="col answer">-->
+                            <!--&lt;!&ndash; Last name &ndash;&gt;-->
+                            <!--<div class="md-form">-->
+                                <!--<input type="number" id="answer" class="form-control" >-->
+                                <!--<label for="answer">Maximum Amount of Bananas Left</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
                     </div>
 
                     <!-- Sign up button -->
-                    <button id="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                    <button id="submit" class="btn btn-outline-warning btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
 
                     <!-- Social register -->
                     <a type="button" class="btn-floating btn-git btn-sm">
@@ -99,8 +97,6 @@
             </div>
 
         </div>
-        <!-- Material form register -->
-    </div>
 </div>
 <!--/Start your project here-->
 

@@ -1,1 +1,6 @@
 /* YOUR CUSTOM STYLES */
+body{
+    background: url("../img/banana camel.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
