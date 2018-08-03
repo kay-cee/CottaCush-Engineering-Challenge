@@ -6,15 +6,19 @@ function maxBanana(x,y,z) {
 
     //the algorithm divides the journey into three having an arbitrary points A and B in-between
     x = bananaLeft(x,y);
-    console.log("The amount of bananas left after the first trip set: ");
+    console.log("The amount of bananas left after the first trip set: "+ x);
     bananaLeft(x,y);
     var x1 = bananaLeft(x,y);
-    console.log("The amount of bananas left after the second trip set: ");
+    console.log("The amount of bananas left after the second trip set: " + x1);
     bananaLeft(x1,y);
     var x2 = bananaLeft(x1,y);
     x2 = x2*z;
+    $(".answer").show();
+    x2 = Math.ceil(x2);
     $("#answer").val(x2);
-    alert("The max amount of bananas left is: " + x2);
+    console.log("The max amount of bananas left is: " + x2);
+
+
 }
 
 function bananaLeft(x,y) {
@@ -32,7 +36,7 @@ function tripNo(x) {
 }
 
 function noOfBananas() {
-    var x = $("#nob").val();
+    var x = parseInt($("#nob").val());
     if (x<3000){
         // alert("Number of cammels too small \nEnter a value greater than 2999");
         $("#nob-bananas-help").val("Enter a value greater than or equal to 3000");
@@ -43,12 +47,12 @@ function noOfBananas() {
 }
 
 function noOfCamels() {
-    var z  = $("#noc").val();
+    var z  = parseInt($("#noc").val());
     return z;
 }
 
 function distanceToMarket() {
-    var y = $("#dtm").val();
+    var y = parseInt($("#dtm").val());
     if (y<1000){
         $("#distance-to-market").val("invalid no of camels, no less than 1000")
     }
@@ -61,12 +65,12 @@ function distanceToMarket() {
 }
 
 function bananaEatenPerKm() {
-    var k = $("#BperKm").val();
-    if (y<1000){
+    var k = parseInt($("#BperKm").val());
+    if (k<1){
         $("#bananas-eaten").val("invalid no of camels, no less than 1000")
         $("#BperKm").empty();
     }
-    else if(y>100000){
+    else if(k>10){
         $("#bananas-eaten").val("invalid no of camels, No greater than 100,000")
     }
     else{
@@ -74,8 +78,7 @@ function bananaEatenPerKm() {
     }
 }
 
-$("#submit").click(function () {
-
+$("#submit").on('click',function () {
     console.log("button click recorded");
     var x = noOfBananas();
     var y = distanceToMarket();
@@ -85,4 +88,8 @@ $("#submit").click(function () {
 
     maxBanana(x,y,z);
 
+});
+
+$(document).ready(function () {
+   $(".answer").hide()
 });
